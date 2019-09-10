@@ -43,6 +43,7 @@ def sort_by_order(array, index):
 
     return sortedArrs
 
+# Takes a list of lists, runs them through sort_by_order, and returns as a single list of lists, not a list of multiple-nested lists
 def next_sort(array, index):
     newList = []
     for item in array:
@@ -56,9 +57,11 @@ secsort = next_sort(prelimsort,1)
 trisort = next_sort(secsort,2)
 lastsort = next_sort(trisort,3)
 
+# Combine all lists into one list
 finalArr = []
 for item in lastsort:
     finalArr = finalArr + item
 
+# print to STDOUT
 for IP in finalArr:
     print IP
